@@ -1,1 +1,28 @@
-<link rel="stylesheet" href="style(2).css">
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #0d0d0d;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background-color: red;
+    padding: 20px;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #222;
+    padding: 20px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
