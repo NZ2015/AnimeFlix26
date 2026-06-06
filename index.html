@@ -45,18 +45,19 @@
 <script>
 const search = document.getElementById("search");
 
-search.addEventListener("keyup", function() {
-    let filter = search.value.toLowerCase();
-    let cards = document.querySelectorAll(".anime-card");
+search.addEventListener("input", () => {
+    const filter = search.value.toLowerCase();
+    const cards = document.querySelectorAll(".anime-cards");
 
     cards.forEach(card => {
-        let title = card.querySelector("h3").textContent.toLowerCase();
+        const title = card.querySelector("h3");
 
-        if (title.includes(filter)) {
-            card.style.display = "block";
-        } else {
-            card.style.display = "none";
-        }
+        if (!title) return;
+
+        const animeName = title.textContent.toLowerCase();
+
+        card.style.display =
+            animeName.includes(filter) ? "block" : "none";
     });
 });
 </script>
