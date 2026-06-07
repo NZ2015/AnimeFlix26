@@ -32,3 +32,27 @@
 
 </body>
 </html>
+<script>
+const episodes = [
+    "naruto-episode1.mp4",
+    "naruto-episode2.mp4",
+    "naruto-episode3.mp4"
+];
+
+let current = 0;
+
+const video = document.getElementById("video");
+const nextBtn = document.getElementById("nextBtn");
+
+nextBtn.addEventListener("click", () => {
+    current++;
+
+    if (current >= episodes.length) {
+        alert("Fin des épisodes !");
+        current = 0;
+    }
+
+    video.src = episodes[current];
+    video.play();
+});
+</script>
