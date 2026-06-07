@@ -64,3 +64,6 @@ border-radius: 5px;
 .anime-card a:hover {
 background: darkred;
 }
+.anime-card {
+    cursor: pointer;
+}
