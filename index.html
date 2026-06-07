@@ -28,14 +28,14 @@
 
   <div class="anime-card">
     <img src="onepiece.jpg" alt="Luffy" width="150">
-    <h3>nepiece</h3>
+    <h3>One Piece</h3>
     <p>aventure de pirates </p>
     <a href="onepiece.html">Voir</a>
 </div> 
 
    <div class="anime-card">
     <img src="bluelock.jpg" alt="Rin" width="150">
-    <h3>bluelock</h3>
+    <h3>Blue Lock</h3>
     <p>football</p>
     <a href="bluelock.html">Voir</a>
 </div>
@@ -55,13 +55,9 @@ search.addEventListener("input", () => {
 
     cards.forEach(card => {
         const title = card.querySelector("h3");
+        const text = title ? title.textContent.toLowerCase() : "";
 
-        if (!title) return;
-
-        const animeName = title.textContent.toLowerCase();
-
-        card.style.display =
-            animeName.includes(filter) ? "block" : "none";
+        card.style.display = text.includes(filter) ? "flex" : "none";
     });
 });
 </script>
