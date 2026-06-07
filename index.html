@@ -15,26 +15,28 @@
 </header>
 
 <input type="text" id="search" placeholder="Rechercher un anime...">
-
 <section class="grid">
 
-    <div class="anime-card">
-        <img src="naruto.jpg" alt="Naruto" width="150">
-        <h3>Naruto</h3>
-        <p>Ninja aventure</p>
-    </div>
+   <div class="anime-card">
+    <img src="naruto.jpg" alt="Naruto" width="150">
+    <h3>Naruto</h3>
+    <p>Ninja aventure</p>
+    <a href="naruto.html">Voir</a>
+</div>
 
-    <div class="anime-card">
-        <img src="nagi.jpg" alt="Nagi" width="150">
-        <h3>Nagi</h3>
-        <p>Blue Lock</p>
-    </div>
+  <div class="anime-card">
+    <img src="onepiece.jpg" alt="Luffy" width="150">
+    <h3>nepiece</h3>
+    <p>aventure de pirates </p>
+    <a href="onepiece.html">Voir</a>
+</div> 
 
-    <div class="anime-card">
-        <img src="luffy.jpg" alt="Luffy" width="150">
-        <h3>Luffy</h3>
-        <p>One Piece</p>
-    </div>
+   <div class="anime-card">
+    <img src="bluelock.jpg" alt="Rin" width="150">
+    <h3>bluelock</h3>
+    <p>football</p>
+    <a href="bluelock.html">Voir</a>
+</div>
 
 </section>
 
@@ -47,7 +49,7 @@ const search = document.getElementById("search");
 
 search.addEventListener("input", () => {
     const filter = search.value.toLowerCase();
-    const cards = document.querySelectorAll(".anime-cards");
+    const cards = document.querySelectorAll(".anime-card");
 
     cards.forEach(card => {
         const title = card.querySelector("h3");
